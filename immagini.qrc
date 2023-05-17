@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/math">
+        <file>1giudizio.svg</file>
+        <file>2giudizio.svg</file>
+        <file>3giudizio.svg</file>
+    </qresource>
+</RCC>

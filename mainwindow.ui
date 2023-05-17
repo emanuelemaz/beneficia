@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>674</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Beneficia?</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Software per la stima dei miglioramenti fondiari</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Dati noti</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Tempo della trasformazione</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Beneficio fondiario postmiglioramento (Bfp)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Beneficio fondiario antemiglioramento (Bfa)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="label_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>€</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Saggio di interesse (r)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1" colspan="2">
+        <widget class="QDoubleSpinBox" name="r_sb">
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+         <property name="decimals">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="2">
+        <widget class="QDoubleSpinBox" name="rc_sb">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+         <property name="decimals">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QDoubleSpinBox" name="tempo_sb"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>€</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="bfa_sb">
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="bfp_sb"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="bfp_ordinario">
+         <property name="text">
+          <string>Ordinario</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Saggio di capitalizzazione (rc)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="bfa_ordinario">
+         <property name="text">
+          <string>Ordinario</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fattori di anticipo/posticipo assenti poiché il Beneficio fondiario è, per definizione, un reddito netto annuo ordinario &lt;span style=&quot; font-weight:700;&quot;&gt;posticipato&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="title">
+       <string>Benefici fondiari transitori (Bft)</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="bft_add">
+         <property name="text">
+          <string>Aggiungi</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="bft_del">
+         <property name="text">
+          <string>Elimina</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QTableWidget" name="bft_table">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Importo</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Anno inizio</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Anno fine</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Le spese indirette (mancati redditi) vengono calcolate automaticamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="title">
+       <string>Spese dirette (K)</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="k_add">
+         <property name="text">
+          <string>Aggiungi</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="k_del">
+         <property name="text">
+          <string>Elimina</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QTableWidget" name="k_table">
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Importo</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Anno inizio</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Anno fine</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Fattore di anticipo/posticipo</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="stima_btn">
+      <property name="text">
+       <string>Stima</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>bfa_sb</tabstop>
+  <tabstop>bfp_sb</tabstop>
+  <tabstop>rc_sb</tabstop>
+  <tabstop>r_sb</tabstop>
+  <tabstop>tempo_sb</tabstop>
+  <tabstop>bft_add</tabstop>
+  <tabstop>bft_del</tabstop>
+  <tabstop>k_add</tabstop>
+  <tabstop>k_del</tabstop>
+  <tabstop>stima_btn</tabstop>
+  <tabstop>bfa_ordinario</tabstop>
+  <tabstop>bfp_ordinario</tabstop>
+  <tabstop>bft_table</tabstop>
+  <tabstop>k_table</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
